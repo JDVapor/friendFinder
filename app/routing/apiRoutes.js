@@ -1,6 +1,10 @@
+var friends = require('../data/friends.js');
+
 module.exports = function(app) {
 
   app.get('/api/friends', (req, res) => {
+
+    res.json(friends);
 
   });
 
@@ -12,7 +16,6 @@ module.exports = function(app) {
 
     friends.push(newFriend);
 
-    friends.json(friends);
   });
 
 };
