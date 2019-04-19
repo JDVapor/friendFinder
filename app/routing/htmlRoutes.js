@@ -4,7 +4,7 @@ var {
 
 var publicFolderPath = join(__dirname + "./../public");
 
-module.exports = function(app) {
+module.exports = function(app, path) {
 
   app.get('/', (req, res) => {
     res.sendFile(publicFolderPath + "/home.html");
